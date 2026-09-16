@@ -2238,7 +2238,15 @@ Import backup (.json)
   .demo-pill-dot { width: 8px; height: 8px; border-radius: 50%; background: rgb(var(--c-gold-light)); }
   .demo-pill.is-low .demo-pill-dot { background: #F4B183; }
   .demo-pill.is-locked { background: #9E4732; border-color: #E8998A; }
-  @media (max-width: 640px) { .demo-pill { right: 56px; bottom: 12px; font-size: 11px; } }
+  @media (max-width: 640px) {
+    .demo-pill {
+      right: 12px;
+      top: calc(96px + env(safe-area-inset-top));
+      bottom: auto;
+      max-width: calc(100vw - 24px);
+      font-size: 11px;
+    }
+  }
   @media print {
     body > * { display: none !important; }
     body::after { content: "Printing is available in the full version of WellTrack Digital."; display: block; padding: 40px; font: 16px sans-serif; }
